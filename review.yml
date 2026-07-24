@@ -1,0 +1,121 @@
+aid: tia-health
+name: Tia Health
+review:
+  question: Does Tia Health expose a documented public API, developer portal, or HL7
+    FHIR interoperability surface?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: Canada
+findings:
+  summary: |
+    Tia Health is a consumer-facing Canadian telehealth product and does not
+    publish a public developer portal, a documented REST/OpenAPI, or an HL7 FHIR
+    interoperability surface as of the review date. The marketing site
+    (https://tiahealth.com/, HTTP 200) describes on-demand virtual visits with
+    licensed Canadian providers, prescription renewals, sick notes, lab
+    requisitions, and mental health therapy, with care delivered through a
+    patient web/mobile application (login at https://app.tiahealth.com, HTTP 200;
+    booking at https://book.tiahealth.com, HTTP 200). No developer, docs, api, or
+    fhir subdomain resolves, and no in-page API/FHIR/interoperability
+    documentation is linked. Tia Health is part of WELL Health Technologies Corp.
+    In the Canadian market, pan-Canadian FHIR interoperability (CA Core / CA
+    Baseline) is stewarded federally by Canada Health Infoway; Tia Health does
+    not publicly expose a CapabilityStatement or SMART-on-FHIR configuration.
+  developerPortal:
+    url: null
+    status: none-found
+    note: |
+      Probed developer.tiahealth.com, docs.tiahealth.com, api.tiahealth.com,
+      fhir.tiahealth.com (all DNS/connection failures, curl code 000) and
+      tiahealth.com/developers, /developer, /api, /interoperability (all HTTP
+      404). No public developer portal exists.
+  fhirCapabilityStatement:
+    present: false
+    fhirVersion: null
+    resources: []
+    note: |
+      No FHIR base is documented. Probed api.tiahealth.com/metadata and
+      fhir.tiahealth.com/metadata (DNS failure, curl 000) and
+      tiahealth.com/.well-known/smart-configuration (HTTP 404). No
+      CapabilityStatement / metadata document was returned.
+  smartOnFhir:
+    present: false
+    note: |
+      tiahealth.com/.well-known/smart-configuration and
+      /.well-known/openid-configuration both return HTTP 404. No
+      SMART-on-FHIR authorization metadata is served.
+  downloadableSpecs:
+    count: 0
+    note: |
+      No /openapi.json, /openapi.yaml, /swagger.json, /api-docs, or /spec was
+      discoverable on any resolving host. No OpenAPI/Swagger or FHIR
+      CapabilityStatement was harvested; openapi/ contains no specs.
+  authModel:
+    scheme: none-public
+    note: |
+      Access is via authenticated patient accounts in the Tia Health
+      application (app.tiahealth.com). No public API authentication scheme
+      (SMART-on-FHIR, OAuth2 client-credentials, API key, or mTLS) is
+      documented because no public API is offered.
+  standardsConformance:
+    usCore: not-applicable
+    ukCore: not-applicable
+    auCore: not-applicable
+    caCore: not-published
+    daVinci: not-applicable
+    carin: not-applicable
+    note: |
+      Canada's pan-Canadian FHIR profiles (CA Core / CA Baseline) are stewarded
+      by Canada Health Infoway. Tia Health publishes no conformance claim and no
+      machine-readable CapabilityStatement, so no standards profile can be
+      confirmed.
+  gatedVsSelfServe: no-public-api
+  parentCompany: WELL Health Technologies Corp.
+  transports:
+  - protocol: Web Application
+    scheme: https
+    baseURL: https://app.tiahealth.com
+    documented: true
+    note: Authenticated patient web/mobile application; not a documented developer API.
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: No public REST API base URL or OpenAPI is documented.
+  - protocol: FHIR
+    scheme: https
+    documented: false
+    note: No FHIR base URL or CapabilityStatement is documented.
+sources:
+- url: https://tiahealth.com/
+  type: Website
+  status: 200
+  note: Consumer telehealth marketing site; describes virtual visits, prescriptions,
+    lab requisitions, and therapy. No API/FHIR/interoperability links.
+- url: https://tiahealth.com/about/
+  type: About
+  status: 200
+  note: Company overview; part of WELL Health clinic network.
+- url: https://app.tiahealth.com/auth/login/tiaHealth;patientLogin=true
+  type: Login
+  status: 200
+  note: Patient application login. Access is consumer-account based, not a developer API.
+- url: https://tiahealth.com/.well-known/smart-configuration
+  type: WellKnown
+  status: 404
+  note: No SMART-on-FHIR configuration served.
+- url: https://tiahealth.com/developers
+  type: DeveloperPortal
+  status: 404
+  note: No developer portal.
+actions:
+  apisYmlUpdated: true
+  reason: |
+    No public developer portal, OpenAPI, or FHIR CapabilityStatement exists.
+    apis.yml captures organization identity and the verified public web
+    properties (Website, About, Blog, Support, Contact, Login, Terms, Privacy)
+    with an empty apis[] list because no real, documented API surface is
+    published. This is an honest identity-only (built-stub) profile.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

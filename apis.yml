@@ -1,0 +1,52 @@
+aid: tia-health
+url: https://raw.githubusercontent.com/api-evangelist/tia-health/refs/heads/main/apis.yml
+name: Tia Health
+kind: company
+description: Tia Health is a Canadian telehealth platform that connects patients with
+  licensed Canadian providers - family doctors, nurse practitioners, specialists, and
+  naturopaths - for on-demand virtual care by phone, video, and secure messaging. Its
+  services span virtual walk-in and family-practice appointments, prescription renewals,
+  sick notes, lab requisitions, and mental health therapy (via partner Focus Mental
+  Wellness), with visits covered by provincial health plans in Ontario (OHIP), British
+  Columbia (MSP), and Alberta (AHCIP) and paid options elsewhere. Tia Health is part
+  of the WELL Health Technologies Corp. clinic network, one of the largest outpatient
+  networks in Canada. As of this review Tia Health is a consumer-facing virtual-care
+  product with no public developer portal, no documented REST/OpenAPI, and no exposed
+  HL7 FHIR CapabilityStatement or SMART-on-FHIR configuration; interoperability in the
+  Canadian market is stewarded federally through Canada Health Infoway's pan-Canadian
+  FHIR (CA Core / CA Baseline) specifications, which this platform does not publicly
+  surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Canada
+- Telehealth
+- Virtual Care
+- Digital Health
+- Primary Care
+- Mental Health
+- Prescriptions
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://tiahealth.com/
+- type: About
+  url: https://tiahealth.com/about/
+- type: Blog
+  url: https://tiahealth.com/blog/
+- type: Support
+  url: https://tiahealth.com/support/
+- type: Contact
+  url: https://tiahealth.com/contact/
+- type: Login
+  url: https://app.tiahealth.com/auth/login/tiaHealth;patientLogin=true
+- type: TermsOfService
+  url: https://tiahealth.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://tiahealth.com/tia-privacy-policy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
