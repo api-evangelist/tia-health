@@ -16,6 +16,17 @@ description: Tia Health is a Canadian telehealth platform that connects patients
   Canadian market is stewarded federally through Canada Health Infoway's pan-Canadian
   FHIR (CA Core / CA Baseline) specifications, which this platform does not publicly
   surface.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://tiahealth.com/wp-content/uploads/2020/11/Tia-Health-RGB-Colour.png
 tags:
 - Healthcare
