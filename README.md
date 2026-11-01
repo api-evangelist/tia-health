@@ -1,4 +1,4 @@
-# Tia Health (tia-health)
+# Tia Health
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,50 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tia Health is a Canadian telehealth platform that connects patients with licensed Canadian providers - family doctors, nurse practitioners, specialists, and naturopaths - for on-demand virtual care by phone, video, and secure messaging. Services include virtual walk-in and family-practice appointments, prescription renewals, sick notes, lab requisitions, and mental health therapy (via partner Focus Mental Wellness). Visits are covered by provincial health plans in Ontario (OHIP), British Columbia (MSP), and Alberta (AHCIP), with paid options elsewhere. Tia Health is part of WELL Health Technologies Corp., one of the largest outpatient clinic networks in Canada.
+Tia Health is a Canadian telehealth platform that connects patients with licensed Canadian providers - family doctors, nurse practitioners, specialists, and naturopaths - for on-demand virtual care by phone, video, and secure messaging. Its services span virtual walk-in and family-practice appointments, prescription renewals, sick notes, lab requisitions, and mental health therapy (via partner Focus Mental Wellness), with visits covered by provincial health plans in Ontario (OHIP), British Columbia (MSP), and Alberta (AHCIP) and paid options elsewhere. Tia Health is part of the WELL Health Technologies Corp. clinic network, one of the largest outpatient networks in Canada. As of this review Tia Health is a consumer-facing virtual-care product with no public developer portal, no documented REST/OpenAPI, and no exposed HL7 FHIR CapabilityStatement or SMART-on-FHIR configuration; interoperability in the Canadian market is stewarded federally through Canada Health Infoway's pan-Canadian FHIR (CA Core / CA Baseline) specifications, which this platform does not publicly surface.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/tia-health/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/tia-health/refs/heads/main/apis.yml)
+**Areas:** Healthcare · Canada · Telehealth · Virtual Care · Digital Health · Primary Care · Mental Health · Prescriptions
 
-## Tags
+## Tia Health on APIs.io
 
-- Healthcare
-- Canada
-- Telehealth
-- Virtual Care
-- Digital Health
-- Primary Care
-- Mental Health
-- Prescriptions
+Everything profiled for Tia Health is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tia-health/](https://apis.io/providers/tia-health/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-Tia Health is a consumer-facing virtual-care product. As of this review it publishes **no public developer portal, no documented REST/OpenAPI, and no HL7 FHIR CapabilityStatement or SMART-on-FHIR configuration**. Care is delivered through an authenticated patient application (app.tiahealth.com), not through a documented developer API.
+Authentication, trust centre, and vulnerability disclosure.
 
-Probes performed (see `review.yml` for full HTTP status detail):
+- [Tia Health Domain Security](https://apis.io/security/tia-health/tia-health-domain-security/)
 
-- `developer.tiahealth.com`, `docs.tiahealth.com`, `api.tiahealth.com`, `fhir.tiahealth.com` — do not resolve
-- `tiahealth.com/developers`, `/developer`, `/api`, `/interoperability` — HTTP 404
-- `tiahealth.com/.well-known/smart-configuration`, `/.well-known/openid-configuration` — HTTP 404
+## Where to find this API
 
-In the Canadian market, pan-Canadian FHIR interoperability (CA Core / CA Baseline) is stewarded federally by Canada Health Infoway; Tia Health does not publicly surface a conformance statement.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://tiahealth.com/)
-- [About](https://tiahealth.com/about/)
-- [Blog](https://tiahealth.com/blog/)
+- [Pricing](https://tiahealth.com/#pricing)
+- [Sign up](https://book.tiahealth.com/)
 - [Support](https://tiahealth.com/support/)
-- [Contact](https://tiahealth.com/contact/)
-- [Login](https://app.tiahealth.com/auth/login/tiaHealth;patientLogin=true)
-- [Terms of Service](https://tiahealth.com/terms-of-use)
-- [Privacy Policy](https://tiahealth.com/tia-privacy-policy)
+- [Blog](https://tiahealth.com/blog/)
+- [Terms of service](https://tiahealth.com/terms-of-use)
+- [Privacy policy](https://tiahealth.com/tia-privacy-policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 32.9 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tia-health/](https://apis.io/providers/tia-health/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tia Health: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tia-health/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
